@@ -1,20 +1,10 @@
-const initialExperiences = [
-  { id: 1, title: 'Alleyway Pottery Workshop', kind: 'Hands-on craft', distance: '0.8 km away', travel: '8 min walk', duration: '55 min', budget: '$$', vibe: ['Local Artisans', 'Solo & Quiet'], score: 96, match: 98, weather: 'outdoor', venueStatus: 'open', merchantOffer: 0, image: 'https://images.unsplash.com/photo-1565193298357-c34c6fc9f03f?auto=format&fit=crop&w=900&q=80', pin: 'A' },
-  { id: 2, title: 'Secret Espresso Bar', kind: 'Coffee & conversation', distance: '0.3 km away', travel: '4 min walk', duration: '35 min', budget: '$', vibe: ['Hidden Food', 'Solo & Quiet'], score: 94, match: 96, weather: 'covered', venueStatus: 'open', merchantOffer: 10, image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80', pin: 'B' },
-  { id: 3, title: 'Rooftop Stories at Old Mint', kind: 'Culture & heritage', distance: '1.1 km away', travel: '12 min walk', duration: '45 min', budget: '$$', vibe: ['Culture & Heritage', 'Local Artisans'], score: 91, match: 94, weather: 'outdoor', venueStatus: 'open', merchantOffer: 0, image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=900&q=80', pin: 'C' },
-  { id: 4, title: 'Vinyl Listening Room', kind: 'After-dark gem', distance: '0.6 km away', travel: '7 min walk', duration: '50 min', budget: '$$$', vibe: ['Nightlife', 'Culture & Heritage'], score: 89, match: 92, weather: 'covered', venueStatus: 'open', merchantOffer: 0, image: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=900&q=80', pin: 'D' }
-];
-const rainExperiences = [
-  { id: 5, title: 'Covered Artisan Market', kind: 'Indoor local makers', distance: '0.4 km away', travel: '5 min walk', duration: '50 min', budget: '$$', vibe: ['Local Artisans', 'Hidden Food'], score: 98, match: 99, weather: 'covered', venueStatus: 'open', merchantOffer: 15, image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80', pin: 'A' },
-  { id: 2, title: 'Secret Espresso Bar', kind: 'Coffee & conversation', distance: '0.3 km away', travel: '4 min walk', duration: '35 min', budget: '$', vibe: ['Hidden Food', 'Solo & Quiet'], score: 94, match: 96, weather: 'covered', venueStatus: 'open', merchantOffer: 10, image: initialExperiences[1].image, pin: 'B' },
-  { id: 6, title: 'Underground Photo Archive', kind: 'Culture & heritage', distance: '0.7 km away', travel: '9 min walk', duration: '40 min', budget: '$', vibe: ['Culture & Heritage', 'Solo & Quiet'], score: 93, match: 95, weather: 'covered', venueStatus: 'open', merchantOffer: 0, image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=900&q=80', pin: 'C' },
-  { id: 4, title: 'Vinyl Listening Room', kind: 'After-dark gem', distance: '0.6 km away', travel: '7 min walk', duration: '50 min', budget: '$$$', vibe: ['Nightlife', 'Culture & Heritage'], score: 89, match: 92, weather: 'covered', venueStatus: 'open', merchantOffer: 0, image: initialExperiences[3].image, pin: 'D' }
-];
+const initialExperiences = [];
+const rainExperiences = [];
 const API_BASE_URL = '/api';
-const USE_REMOTE_API = false;
+const USE_REMOTE_API = true;
 const vibes = ['Solo & Quiet', 'Local Artisans', 'Hidden Food', 'Culture & Heritage', 'Nightlife'];
 // Store traveler preferences and the current route in plain JavaScript.
-const state = { hours: 2.5, budget: '$$', chosenVibes: ['Local Artisans', 'Culture & Heritage'], rain: false, itinerary: [2, 1, 3], originalItinerary: [2, 1, 3] };
+const state = { hours: 2.5, budget: '$$', chosenVibes: ['Local Artisans', 'Culture & Heritage'], rain: false, itinerary: [2, 1, 3], originalItinerary: [2, 1, 3], saved: [], currentExperiences: initialExperiences, weather: { condition: 'Clear', temperature: 26 }, itinerarySummary: null };
 const iconNames = { '⌖': 'map-pin', '☂': 'cloud-rain', '☀': 'sun', '♧': 'bell', '◷': 'clock-3', '＋': 'plus', '↗': 'arrow-up-right', '◆': 'gem', '←': 'arrow-left', '⚡': 'zap', '✦': 'sparkles', '×': 'x', '⌄': 'chevron-down', '★': 'star', '✓': 'check', '☰': 'menu' };
 const icon = value => `<i data-lucide="${iconNames[value] || value}" aria-hidden="true"></i>`;
 const app = document.querySelector('#customer-app');
@@ -28,30 +18,47 @@ function initializeIcons(root = document) {
   if (window.lucide) window.lucide.createIcons({ attrs: { 'stroke-width': 2 } });
 }
 
-async function requestJson(endpoint, fallback) {
+async function requestJson(endpoint, fallback, options = {}) {
   if (!USE_REMOTE_API) return fallback;
   try {
-    const response = await fetch(`${API_BASE_URL}${endpoint}`);
-    if (!response.ok) throw new Error(`Request failed: ${response.status}`);
-    return await response.json();
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, options);
+    const payload = await response.json();
+    if (!response.ok || payload.success === false) throw new Error(payload.message || `Request failed: ${response.status}`);
+    return payload;
   } catch (error) {
     console.error(`HiddenGemsAI API fallback for ${endpoint}`, error);
+    showAlert(error.message.startsWith('Request failed') ? 'Unable to reach HiddenGemsAI right now. Please try again.' : error.message);
     return fallback;
   }
 }
 async function getExperiences() {
-  return requestJson('/experiences.php', state.rain ? rainExperiences : initialExperiences);
+  const fallback = state.rain ? rainExperiences : initialExperiences;
+  const data = await requestJson(`/experiences?rain=${state.rain}`, { experiences: fallback });
+  return data.data?.experiences || fallback;
 }
 async function getMerchantOffers() {
-  return requestJson('/merchant-offers.php', []);
+  const data = await requestJson('/offers', { offers: [] });
+  return data.data?.offers || [];
+}
+async function refreshWeather() {
+  const data = await requestJson(`/weather?rain=${state.rain}`, null);
+  if (data && data.data?.weather) state.weather = data.data.weather;
 }
 async function generateRoute() {
-  const experiences = await getExperiences();
-  render(experiences);
+  const fallback = { experiences: await getExperiences(), itinerary: state.itinerary };
+  const route = await requestJson('/recommendations', fallback, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ availableTime: state.hours, budget: state.budget, vibes: state.chosenVibes, weather: state.rain ? 'rain' : 'clear' })
+  });
+  state.currentExperiences = route.data?.recommendations || fallback.experiences;
+  state.itinerary = route.data?.itinerary || state.itinerary;
+  render(state.currentExperiences);
 }
 
 function header() {
-  return `<nav class="topbar"><a class="brand" href="customer.html"><span class="gem">◆</span><span>HiddenGems<span>AI</span></span></a><div class="context">${icon('⌖')}<span>Downtown Quarter</span><i></i><span>☀ Clear 26°C</span></div><div class="nav-actions"><button class="rain-button" id="rain-toggle">☂ <span>${state.rain ? 'Restore original route' : 'Simulate rain / closure'}</span></button><button class="notification" aria-label="Notifications">♧<b></b></button><div class="mode-toggle"><button class="active">Traveler</button><button onclick="location.href='merchant.html'">Merchant</button></div><button class="mobile-menu" aria-label="Menu">☰</button></div></nav>`;
+  const weatherIcon = state.rain ? '☂' : '☀';
+  return `<nav class="topbar"><a class="brand" href="customer.html"><span class="gem">◆</span><span>HiddenGems<span>AI</span></span></a><div class="context">${icon('⌖')}<span>Downtown Quarter</span><i></i><span>${weatherIcon} ${state.weather.condition} ${state.weather.temperature}°C</span></div><div class="nav-actions"><button class="rain-button" id="rain-toggle">☂ <span>${state.rain ? 'Restore original route' : 'Simulate rain / closure'}</span></button><button class="notification" aria-label="Notifications">♧<b></b></button><div class="mode-toggle"><button class="active">Traveler</button><button onclick="location.href='merchant.html'">Merchant</button></div><button class="mobile-menu" aria-label="Menu">☰</button></div></nav>`;
 }
 function card(item, index) {
   const added = state.itinerary.includes(item.id);
@@ -64,7 +71,7 @@ function updateItinerary(experiences) {
   const items = state.itinerary.map(id => experiences.find(item => item.id === id) || initialExperiences.find(item => item.id === id)).filter(Boolean);
   const used = items.reduce((total, item) => total + parseInt(item.duration, 10) + parseInt(item.travel, 10), 0);
   const remaining = Math.max(state.hours * 60 - used, 0);
-  return `<aside class="itinerary glass"><div class="itinerary-top"><div><p class="eyebrow">⚡ YOUR MICRO-ITINERARY</p><h2>Afternoon of small wonders</h2></div><button aria-label="Collapse itinerary">⌄</button></div><div class="route-progress"><div><span>${Math.floor(used / 60)} hrs ${used % 60} mins used · ${Math.floor(remaining / 60)} hrs ${remaining % 60} mins left</span><b>of ${state.hours} hrs</b></div><div class="progress"><i style="width:${Math.min(used / (state.hours * 60) * 100, 100)}%"></i></div></div><div class="timeline">${items.map((item, index) => `<div class="timeline-item"><div class="step"><span>${index + 1}</span>${index < items.length - 1 ? '<i></i>' : ''}</div><div><p>${item.duration} · ${item.travel}</p><h3>${item.title}</h3><small>${item.kind}</small></div></div>`).join('')}</div><div class="itinerary-footer"><div><span>Total value</span><b>$${items.length ? items.length * 18 + 14 : 0}</b></div><button>Book all & save ↗</button></div></aside>`;
+  return `<aside class="itinerary glass"><div class="itinerary-top"><div><p class="eyebrow">⚡ YOUR MICRO-ITINERARY</p><h2>Afternoon of small wonders</h2></div><button aria-label="Collapse itinerary">⌄</button></div><div class="route-progress"><div><span>${Math.floor(used / 60)} hrs ${used % 60} mins used · ${Math.floor(remaining / 60)} hrs ${remaining % 60} mins left</span><b>of ${state.hours} hrs</b></div><div class="progress"><i style="width:${Math.min(used / (state.hours * 60) * 100, 100)}%"></i></div></div><div class="timeline">${items.map((item, index) => `<div class="timeline-item"><div class="step"><span>${index + 1}</span>${index < items.length - 1 ? '<i></i>' : ''}</div><div><p>${item.duration} · ${item.travel}</p><h3>${item.title} <button class="remove-stop" data-remove="${item.id}" aria-label="Remove ${item.title}">×</button></h3><small>${item.kind}</small></div></div>`).join('')}</div><div class="itinerary-footer"><div><span>Total value</span><b>$${items.length ? items.length * 18 + 14 : 0}</b></div><button>Book all & save ↗</button></div></aside>`;
 }
 function calculateFeasibility(experience, preferences) {
   const budgetLevels = { '$': 1, '$$': 2, '$$$': 3 };
@@ -78,9 +85,9 @@ function calculateFeasibility(experience, preferences) {
   return Math.max(20, Math.min(99, Math.round(experience.score + matchingVibes * 3 + budgetScore + timeScore + weatherScore + venueScore + offerScore)));
 }
 function getScoredExperiences(source) {
-  const experiences = source || (state.rain ? rainExperiences : initialExperiences);
+  const experiences = source || state.currentExperiences || (state.rain ? rainExperiences : initialExperiences);
   return experiences.map(item => {
-    const fit = calculateFeasibility(item, state);
+    const fit = Number.isFinite(item.fit) ? item.fit : calculateFeasibility(item, state);
     return { ...item, fit, match: Math.min(99, fit + 2) };
   }).sort((first, second) => second.fit - first.fit);
 }
@@ -91,35 +98,101 @@ function render(source) {
   bindEvents();
 }
 // Add selected experience to the itinerary without allowing duplicates or a fourth stop.
-function addToItinerary(id) {
-  if (state.itinerary.includes(id)) return;
-  if (state.itinerary.length >= 3) { showAlert('Your itinerary already has 3 stops. Remove a stop before adding another.'); return; }
-  state.itinerary.push(id);
-  render();
+async function addToItinerary(id, button) {
+  if (button) { button.disabled = true; button.textContent = 'Adding...'; }
+  const result = await requestJson('/itinerary', { success: false, message: 'The itinerary could not be updated.' }, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ availableTime: state.hours, experiences: [...state.itinerary, id] })
+  });
+  if (!result.success) {
+    if (button) { button.disabled = false; button.textContent = 'Add to itinerary ＋'; }
+    return showAlert(result.message || 'This stop cannot be added to your itinerary.');
+  }
+  state.itinerary = result.data.itinerary;
+  state.itinerarySummary = result.data;
+  render(state.currentExperiences);
 }
-async function simulateRain() {
-  state.originalItinerary = [...state.itinerary];
-  state.rain = true;
-  const indoorIds = new Set(rainExperiences.map(item => item.id));
-  state.itinerary = state.itinerary.filter(id => indoorIds.has(id));
-  await generateRoute();
-  showAlert();
+async function removeFromItinerary(id) {
+  const result = await requestJson(`/itinerary/${id}`, { success: false, message: 'The itinerary could not be updated.' }, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ availableTime: state.hours, experiences: state.itinerary })
+  });
+  if (!result.success) return showAlert(result.message || 'This stop could not be removed.');
+  state.itinerary = result.data.itinerary;
+  state.itinerarySummary = result.data;
+  render(state.currentExperiences);
 }
-async function restoreRoute() {
-  state.rain = false;
-  state.itinerary = [...state.originalItinerary];
-  await generateRoute();
-  showAlert();
+async function simulateRain(button) {
+  if (button) { button.disabled = true; button.querySelector('span').textContent = 'Simulating rain...'; }
+  try {
+    state.originalItinerary = [...state.itinerary];
+    const weather = await requestJson('/weather/simulate', { success: false }, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ condition: 'rain' }) });
+    if (!weather.success) return showAlert('Weather simulation could not be started.');
+    state.rain = weather.data.condition === 'rain';
+    await refreshWeather();
+    await generateRoute();
+    showAlert();
+  } catch (error) {
+    console.error('Unable to simulate rain', error);
+    showAlert('Weather simulation could not be started.');
+  } finally {
+    if (button) { button.disabled = false; button.querySelector('span').textContent = 'Simulate rain / closure'; }
+  }
 }
-function bookItinerary() {
-  showAlert('Demo booking ready: your route is saved for review.');
+async function restoreRoute(button) {
+  if (button) { button.disabled = true; button.querySelector('span').textContent = 'Restoring route...'; }
+  try {
+    document.querySelectorAll('.weather-alert').forEach(alert => alert.remove());
+    const weather = await requestJson('/weather/restore', { success: false }, { method: 'POST', headers: { 'Content-Type': 'application/json' } });
+    if (!weather.success) return showAlert('Weather simulation could not be restored.');
+    state.rain = false;
+    state.itinerary = [...state.originalItinerary];
+    await refreshWeather();
+    await generateRoute();
+    showAlert();
+  } catch (error) {
+    console.error('Unable to restore weather', error);
+    showAlert('Weather simulation could not be restored.');
+  } finally {
+    if (button) { button.disabled = false; button.querySelector('span').textContent = 'Restore original route'; }
+  }
+}
+async function bookItinerary(button) {
+  if (button) { button.disabled = true; button.textContent = 'Saving route...'; }
+  const totalTime = state.itinerarySummary ? state.itinerarySummary.totalTime : Number((state.itinerary.reduce((total, id) => {
+    const item = state.currentExperiences.find(experience => experience.id === id);
+    return total + (item ? parseInt(item.duration, 10) + parseInt(item.travel, 10) : 0);
+  }, 0) / 60).toFixed(2));
+  const result = await requestJson('/bookings', null, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ experiences: state.itinerary, totalTime })
+  });
+  if (button) { button.disabled = false; button.textContent = 'Book all & save ↗'; }
+  showAlert(result && result.success ? `Route saved — confirmation ${result.data.bookingId}` : 'Booking could not be saved. Please try again.');
 }
 function bindEvents() {
-  document.querySelector('#rain-toggle').onclick = () => state.rain ? restoreRoute() : simulateRain();
-  document.querySelector('.generate').onclick = async () => { await generateRoute(); showAlert('Route refreshed from your current time, budget, and vibe selections.'); };
+  document.querySelector('#rain-toggle').onclick = event => state.rain ? restoreRoute(event.currentTarget) : simulateRain(event.currentTarget);
+  document.querySelector('.generate').onclick = async event => {
+    const button = event.currentTarget;
+    button.disabled = true;
+    button.textContent = 'Generating route...';
+    try {
+      await generateRoute();
+      showAlert('Route refreshed from your current time, budget, and vibe selections.');
+    } catch (error) {
+      console.error('Unable to generate route', error);
+      showAlert('The route could not be generated. Please try again.');
+    } finally {
+      button.disabled = false;
+      button.textContent = '✦ Generate my route ↗';
+    }
+  };
   document.querySelector('#hours').oninput = event => {
     state.hours = Number(event.target.value);
-    const experiences = state.rain ? rainExperiences : initialExperiences;
+    const experiences = state.currentExperiences;
     const items = state.itinerary.map(id => experiences.find(item => item.id === id) || initialExperiences.find(item => item.id === id)).filter(Boolean);
     const used = items.reduce((total, item) => total + parseInt(item.duration, 10) + parseInt(item.travel, 10), 0);
     const capacity = state.hours * 60;
@@ -131,9 +204,46 @@ function bindEvents() {
   };
   document.querySelectorAll('[data-budget]').forEach(button => button.onclick = () => { state.budget = button.dataset.budget; render(); });
   document.querySelectorAll('[data-vibe]').forEach(button => button.onclick = () => { state.chosenVibes = state.chosenVibes.includes(button.dataset.vibe) ? state.chosenVibes.filter(vibe => vibe !== button.dataset.vibe) : [...state.chosenVibes, button.dataset.vibe]; render(); });
-  document.querySelectorAll('[data-add]').forEach(button => button.onclick = () => addToItinerary(Number(button.dataset.add)));
+  document.querySelectorAll('[data-add]').forEach(button => button.onclick = () => addToItinerary(Number(button.dataset.add), button));
+  document.querySelectorAll('[data-remove]').forEach(button => button.onclick = () => removeFromItinerary(Number(button.dataset.remove)));
+  document.querySelectorAll('.save').forEach((button, index) => button.onclick = () => {
+    const experience = state.currentExperiences[index];
+    if (!experience) return;
+    const saved = state.saved.includes(experience.id);
+    state.saved = saved ? state.saved.filter(id => id !== experience.id) : [...state.saved, experience.id];
+    showAlert(saved ? `${experience.title} removed from saved gems.` : `${experience.title} saved for later.`);
+  });
   const bookButton = document.querySelector('.itinerary-footer button');
-  bookButton.onclick = bookItinerary;
+  bookButton.onclick = event => bookItinerary(event.currentTarget);
+  document.querySelector('.notification').onclick = () => showAlert('You are all caught up — nearby updates will appear here.');
+  document.querySelector('.mobile-menu').onclick = () => showAlert('Use the Traveler and Merchant controls to switch views.');
+  document.querySelector('.map-header button').onclick = () => showAlert('186 explorers are discovering Downtown Quarter right now.');
+  document.querySelector('.text-button').onclick = async event => {
+    const button = event.currentTarget;
+    button.disabled = true;
+    button.textContent = 'Loading gems...';
+    try {
+      await generateRoute();
+      showAlert('Showing the gems best matched to your current preferences.');
+    } catch (error) {
+      console.error('Unable to load all gems', error);
+      showAlert('The gems could not be loaded. Please try again.');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'See all gems ↗';
+    }
+  };
+  document.querySelector('.itinerary-top button').onclick = event => {
+    const timeline = document.querySelector('.timeline');
+    timeline.hidden = !timeline.hidden;
+    event.currentTarget.setAttribute('aria-expanded', String(!timeline.hidden));
+  };
 }
-function showAlert(message) { const alert = document.createElement('div'); alert.className = 'weather-alert'; const title = message || (state.rain ? 'Weather alert: Rain expected in 15 mins' : 'Route restored: Clear skies ahead'); const detail = message ? 'Your itinerary and recommendations stay synced with your current selections.' : (state.rain ? 'AI is replacing your outdoor walk with a nearby covered artisan market.' : 'Your original outdoor discoveries are back on the route.'); alert.innerHTML = `<div class="alert-icon">☂</div><div><strong>${title}</strong><p>${detail}</p></div><button aria-label="Close">×</button>`; document.body.append(alert); initializeIcons(alert); alert.querySelector('button').onclick = () => alert.remove(); setTimeout(() => alert.remove(), 5000); }
-render();
+function showAlert(message) { document.querySelectorAll('.weather-alert').forEach(alert => alert.remove()); const alert = document.createElement('div'); alert.className = 'weather-alert'; const title = message || (state.rain ? 'Weather alert: Rain expected in 15 mins' : 'Route restored: Clear skies ahead'); const detail = message ? 'Your itinerary and recommendations stay synced with your current selections.' : (state.rain ? 'AI is replacing your outdoor walk with a nearby covered artisan market.' : 'Your original outdoor discoveries are back on the route.'); alert.innerHTML = `<div class="alert-icon">☂</div><div><strong>${title}</strong><p>${detail}</p></div><button aria-label="Close">×</button>`; document.body.append(alert); initializeIcons(alert); alert.querySelector('button').onclick = () => alert.remove(); setTimeout(() => alert.remove(), 5000); }
+async function initializeCustomer() {
+  const health = await requestJson('/health', null);
+  if (!health || !health.success) showAlert('The backend is unavailable. Showing the last available recommendations.');
+  await refreshWeather();
+  await generateRoute();
+}
+initializeCustomer();
