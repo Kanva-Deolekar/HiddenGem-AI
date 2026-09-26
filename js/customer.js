@@ -210,6 +210,30 @@ function renderLeafletMap(experiences) {
     boundsPoints.push([state.userLocation.lat, state.userLocation.lng]);
   }
 
+  // Fetch and show merchants on the map
+  fetch(`${API_BASE_URL}/merchants`).then(res => res.json()).then(data => {
+    if (data.success && data.data) {
+      data.data.forEach(m => {
+        const lat = Number(m.latitude);
+        const lng = Number(m.longitude);
+        if (Number.isFinite(lat) && Number.isFinite(lng)) {
+          const icon = L.divIcon({
+            className: '',
+            html: '<div style="background: var(--brand-pop); color: white; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; border: 2px solid white;">M</div>',
+            iconSize: [20, 20],
+            iconAnchor: [10, 10],
+          });
+          const marker = L.marker([lat, lng], { icon }).addTo(leafletMarkersGroup);
+          marker.bindPopup(`<div class="hg-popup"><h4>${escapeHtml(m.businessName || m.name)}</h4><p>Local Merchant</p></div>`);
+          boundsPoints.push([lat, lng]);
+        }
+      });
+      if (boundsPoints.length > 1) {
+        map.fitBounds(boundsPoints, { padding: [28, 28] });
+      }
+    }
+  }).catch(e => console.error('Failed to load merchants for map', e));
+
   if (boundsPoints.length > 1) {
     map.fitBounds(boundsPoints, { padding: [28, 28] });
   } else if (boundsPoints.length === 1) {
@@ -257,7 +281,44 @@ function getScoredExperiences(source) {
 }
 function render(source) {
   const experiences = getScoredExperiences(source);
-  app.innerHTML = `<div class="app-shell"><div class="folk-pattern top-pattern"></div><div class="folk-pattern side-pattern"></div><div class="marigold marigold-one">✿</div><div class="marigold marigold-two">✿</div>${header()}<header class="hero"><div><p class="eyebrow">✦ AI LOCAL CONCIERGE</p><h1>${state.name ? `Hi ${state.name}, your` : 'Your'} time is short.<br><em>Make it unforgettable.</em></h1><p class="subtitle">We find the little places that turn a free afternoon into a story worth keeping.</p><div class="hand-painted-note">Made for happy wandering <span>✦</span></div></div><div class="hero-art" aria-hidden="true"><div class="hero-sun">☼</div><div class="hero-flower f-one">✿</div><div class="hero-flower f-two">❋</div><div class="hero-flower f-three">✽</div><p>Ghoomo<br>Phiro</p></div><button class="generate">✦ Generate my route ↗</button></header><section class="control-bar glass"><div class="time-control"><div class="control-label">◷ Available time <b id="hours-value">${state.hours} hrs</b></div><input id="hours" type="range" min="1" max="8" step="0.5" value="${state.hours}"><div class="range-labels"><span>1 hr</span><span>8 hrs</span></div></div><div class="divider"></div><div class="budget-control"><div class="control-label">Your budget</div><div class="budget-buttons">${['$', '$$', '$$$'].map(value => `<button class="${state.budget === value ? 'selected' : ''}" data-budget="${value}">${value}</button>`).join('')}</div></div><div class="divider"></div><div class="vibe-control"><div class="control-label">What’s your vibe?</div><div class="vibe-chips">${vibes.map(vibe => `<button class="${state.chosenVibes.includes(vibe) ? 'selected' : ''}" data-vibe="${vibe}">${state.chosenVibes.includes(vibe) ? '✓ ' : ''}${vibe}</button>`).join('')}</div></div></section><main class="content"><section class="discover"><div class="section-head"><div><p class="eyebrow">CURATED FOR YOU</p><h2>${state.rain ? 'A weather-proof adventure' : 'Your hidden gems nearby'}</h2></div><button class="text-button">See all gems ↗</button></div><div class="feed-grid">${map(experiences)}<div class="cards-grid">${experiences.map(card).join('')}</div></div></section>${updateItinerary(experiences)}</main></div>`;
+  app.innerHTML = `<div class="app-shell"><div class="folk-pattern top-pattern"></div><div class="folk-pattern side-pattern"></div><div class="marigold marigold-one">✿</div><div class="marigold marigold-two">✿</div>${header()}<header class="hero"><div><p class="eyebrow">✦ AI LOCAL CONCIERGE</p><h1>${state.name ? `Hi ${state.name}, your` : 'Your'} time is short.<br><em>Make it unforgettable.</em></h1><p class="subtitle">We find the little places that turn a free afternoon into a story worth keeping.</p><div class="hand-painted-note">Made for happy wandering <span>✦</span></div></div><div class="hero-art" aria-hidden="true"><div class="hero-sun">☼</div><div class="hero-flower f-one">✿</div><div class="hero-flower f-two">❋</div><div class="hero-flower f-three">✽</div><p>Ghoomo<br>Phiro</p></div><button class="generate">✦ Generate my route ↗</button></header><section class="control-bar glass"><div class="time-control"><div class="control-label">◷ Available time <b id="hours-value">${state.hours} hrs</b></div><input id="hours" type="range" min="1" max="8" step="0.5" value="${state.hours}"><div class="range-labels"><span>1 hr</span><span>8 hrs</span></div></div><div class="divider"></div><div class="budget-control"><div class="control-label">Your budget</div><div class="budget-buttons">${['$', '$$', '$$$'].map(value => `<button class="${state.budget === value ? 'selected' : ''}" data-budget="${value}">${value}</button>`).join('')}</div></div><div class="divider"></div><div class="vibe-control"><div class="control-label">What’s your vibe?</div><div class="vibe-chips">${vibes.map(vibe => `<button class="${state.chosenVibes.includes(vibe) ? 'selected' : ''}" data-vibe="${vibe}">${state.chosenVibes.includes(vibe) ? '✓ ' : ''}${vibe}</button>`).join('')}</div></div></section><main class="content">
+
+<section class="discover" style="margin-bottom: 2rem;" id="local-offers-section" hidden>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow" style="color: var(--brand-pop);">🔥 LOCAL OFFERS</p>
+      <h2>Flash deals happening now</h2>
+    </div>
+  </div>
+  <div class="feed-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;" id="live-offers-container">
+    <!-- Offers populated via AJAX -->
+  </div>
+</section>
+
+<section class="discover">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">CURATED FOR YOU</p>
+      <h2>${state.rain ? 'A weather-proof adventure' : 'Your hidden gems nearby'}</h2>
+    </div>
+    <button class="text-button">See all gems ↗</button>
+  </div>
+  <div class="feed-grid">${map(experiences)}<div class="cards-grid">${experiences.map(card).join('')}</div></div>
+</section>
+
+<section class="discover" style="margin-top: 2rem;" id="local-merchants-section" hidden>
+  <div class="section-head">
+    <div>
+      <p class="eyebrow">LOCAL MERCHANTS</p>
+      <h2>Support Ratnagiri's local businesses</h2>
+    </div>
+  </div>
+  <div class="feed-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;" id="live-merchants-container">
+    <!-- Merchants populated via AJAX -->
+  </div>
+</section>
+
+${updateItinerary(experiences)}</main></div>`;
   initializeIcons(app);
   app.querySelectorAll('[data-experience-image]').forEach(image => {
     image.addEventListener('error', () => {
@@ -432,6 +493,132 @@ function bindEvents() {
   };
 }
 function showAlert(message) { document.querySelectorAll('.weather-alert').forEach(alert => alert.remove()); const alert = document.createElement('div'); alert.className = 'weather-alert'; const title = message || (state.rain ? 'Weather alert: Rain expected in 15 mins' : 'Route restored: Clear skies ahead'); const detail = message ? 'Your itinerary and recommendations stay synced with your current selections.' : (state.rain ? 'AI is replacing your outdoor walk with a nearby covered artisan market.' : 'Your original outdoor discoveries are back on the route.'); alert.innerHTML = `<div class="alert-icon">☂</div><div><strong>${title}</strong><p>${detail}</p></div><button aria-label="Close">×</button>`; document.body.append(alert); initializeIcons(alert); alert.querySelector('button').onclick = () => alert.remove(); setTimeout(() => alert.remove(), 5000); }
+let lastOffersString = '';
+let lastMerchantsString = '';
+
+async function loadLiveData() {
+  try {
+    const [offersRes, merchantsRes] = await Promise.all([
+      fetch(`${API_BASE_URL}/offers/active`),
+      fetch(`${API_BASE_URL}/merchants`)
+    ]);
+    
+    if (offersRes.ok) {
+      const data = await offersRes.json();
+      const offers = data.data?.offers || [];
+      const newOffersString = JSON.stringify(offers);
+      
+      if (lastOffersString && newOffersString !== lastOffersString && offers.length > 0) {
+        // Assume the first one or a new one was added (just take the newest by creation)
+        const newest = offers.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))[0];
+        if (newest && new Date(newest.createdAt).getTime() > Date.now() - 30000) {
+          showToast(`🔥 New local offer available! ${newest.discount}% OFF at ${newest.merchant?.businessName || newest.merchant?.name || 'a local business'}`);
+        }
+      }
+      
+      if (newOffersString !== lastOffersString) {
+        lastOffersString = newOffersString;
+        renderOffers(offers);
+      }
+    }
+    
+    if (merchantsRes.ok) {
+      const data = await merchantsRes.json();
+      const merchants = data.data || [];
+      const newMerchantsString = JSON.stringify(merchants);
+      
+      if (lastMerchantsString && newMerchantsString !== lastMerchantsString && merchants.length > 0) {
+        const newest = merchants.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))[0];
+        // If created recently
+        if (newest) showToast(`📍 New local experience provider added: ${newest.businessName || newest.name}!`);
+      }
+      
+      if (newMerchantsString !== lastMerchantsString) {
+        lastMerchantsString = newMerchantsString;
+        renderMerchants(merchants);
+      }
+    }
+  } catch (err) {
+    console.error('Live polling failed', err);
+  }
+}
+
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.style.cssText = 'position: fixed; bottom: 20px; left: 20px; background: var(--bg-card); color: var(--text-dark); padding: 1rem 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 9999; border-left: 4px solid var(--brand-pop); font-weight: 600; animation: slideUp 0.3s ease-out;';
+  toast.textContent = message;
+  document.body.appendChild(toast);
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    toast.style.transform = 'translateY(10px)';
+    toast.style.transition = 'all 0.3s ease-in';
+    setTimeout(() => toast.remove(), 300);
+  }, 5000);
+}
+
+function renderOffers(offers) {
+  const section = document.getElementById('local-offers-section');
+  const container = document.getElementById('live-offers-container');
+  if (!section || !container) return;
+  
+  if (offers.length === 0) {
+    section.hidden = true;
+    return;
+  }
+  
+  section.hidden = false;
+  container.innerHTML = offers.map(offer => `
+    <article class="glass" style="padding: 1.5rem; border-radius: 12px; display: flex; flex-direction: column; justify-content: space-between;">
+      <div>
+        <h3 style="margin: 0; color: var(--brand-pop); font-size: 1.4rem;">🔥 ${offer.discount}% OFF</h3>
+        <p style="margin: 0.5rem 0; font-weight: bold;">${offer.experience?.name || 'All Experiences'}</p>
+        <p style="margin: 0 0 0.5rem; color: var(--text-light); font-size: 0.9rem;">${offer.merchant?.businessName || offer.merchant?.name}</p>
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+          <span style="background: var(--bg-alt); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">${offer.targetVibe}</span>
+          <span style="background: var(--bg-alt); padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem;">Valid for ${offer.duration}</span>
+        </div>
+      </div>
+      <div style="display: flex; gap: 0.5rem;">
+        ${offer.experienceId ? `<button class="action map-action" onclick="focusExperienceOnMap('${offer.experienceId}')" style="flex: 1;">View Map</button>` : ''}
+        ${offer.experienceId ? `<button class="action" onclick="addToItinerary('${offer.experienceId}', this)" style="flex: 1;">Add to Route</button>` : ''}
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderMerchants(merchants) {
+  const section = document.getElementById('local-merchants-section');
+  const container = document.getElementById('live-merchants-container');
+  if (!section || !container) return;
+  
+  if (merchants.length === 0) {
+    section.hidden = true;
+    return;
+  }
+  
+  section.hidden = false;
+  container.innerHTML = merchants.map(m => `
+    <article class="glass" style="padding: 1.5rem; border-radius: 12px;">
+      <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--brand-pop); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold;">
+          ${(m.businessName || m.name)[0].toUpperCase()}
+        </div>
+        <div>
+          <h3 style="margin: 0; font-size: 1.2rem;">${m.businessName || m.name}</h3>
+          <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">${m.name}</p>
+        </div>
+      </div>
+      <p style="margin: 0 0 1rem; font-size: 0.9rem;">⌖ ${m.address || 'Ratnagiri'}</p>
+      <button class="action" style="width: 100%;" onclick="alert('View merchant experiences coming soon!')">View Experiences</button>
+    </article>
+  `).join('');
+}
+
+function startLivePolling() {
+  loadLiveData();
+  setInterval(loadLiveData, 5000);
+}
+
 async function initializeCustomer() {
   try {
     const authRes = await fetch(`${API_BASE_URL}/auth/me`);
@@ -460,5 +647,8 @@ async function initializeCustomer() {
   state.userLocation = await requestUserLocationOnce();
   await refreshWeather();
   await generateRoute();
+  
+  // Start the live polling after initial render
+  startLivePolling();
 }
 initializeCustomer();

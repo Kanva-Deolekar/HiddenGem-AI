@@ -42,6 +42,7 @@ app.use('/api/weather', weatherRoutes);
 app.use('/api/recommendations', recommendationRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/merchant', merchantRoutes);
+app.get('/api/merchants', require('./controllers/merchantController').getPublicMerchants);
 
 // Public landing page (no auth required)
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, '..', 'landing.html')));

@@ -107,6 +107,20 @@
           <label>Business email address
             <input type="email" name="email" placeholder="merchant@ratnagiricrafts.in" required autocomplete="email">
           </label>
+          <label>Phone number
+            <input type="text" name="phone" placeholder="+91 98765 43210" required autocomplete="tel">
+          </label>
+          <label>Business address
+            <input type="text" name="address" placeholder="123 Coast Road, Ratnagiri" required autocomplete="street-address">
+          </label>
+          <div style="display:flex;gap:8px;">
+            <label style="flex:1">Latitude
+              <input type="number" step="any" name="latitude" placeholder="16.9902" required>
+            </label>
+            <label style="flex:1">Longitude
+              <input type="number" step="any" name="longitude" placeholder="73.3120" required>
+            </label>
+          </div>
           <label>Password <span style="font-weight:normal;color:#7a8e97;font-size:10px;">(min. 6 chars)</span>
             <input type="password" name="password" placeholder="••••••••" minlength="6" required autocomplete="new-password">
           </label>

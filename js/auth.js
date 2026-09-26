@@ -290,13 +290,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const businessName = merchantRegisterForm.businessName.value.trim();
       const email = merchantRegisterForm.email.value.trim();
+      const phone = merchantRegisterForm.phone?.value.trim();
+      const address = merchantRegisterForm.address?.value.trim();
+      const latitude = merchantRegisterForm.latitude?.value.trim();
+      const longitude = merchantRegisterForm.longitude?.value.trim();
       const password = merchantRegisterForm.password.value;
 
       try {
         const res = await fetch('/api/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ name: businessName, businessName, email, password, role: 'merchant' })
+          body: JSON.stringify({ name: businessName, businessName, email, password, role: 'merchant', phone, address, latitude, longitude })
         });
         const data = await res.json();
 

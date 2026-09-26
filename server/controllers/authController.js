@@ -35,7 +35,7 @@ function clearAuthCookie(res) {
 
 async function register(req, res) {
   try {
-    const { name, email, password, role, businessName } = req.body;
+    const { name, email, password, role, businessName, phone, address, latitude, longitude } = req.body;
 
     if (!email || !email.includes('@')) {
       return res.status(400).json({ success: false, message: 'Please provide a valid email address.' });
@@ -52,7 +52,11 @@ async function register(req, res) {
       email,
       password,
       role,
-      businessName
+      businessName,
+      phone,
+      address,
+      latitude,
+      longitude
     });
 
     const devVerificationUrl = `/login.html?verifyToken=${verificationToken}&email=${encodeURIComponent(user.email)}`;

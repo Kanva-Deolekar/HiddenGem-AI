@@ -36,7 +36,7 @@ function findByVerificationToken(token) {
   return User.findOne({ verificationToken: trimmed });
 }
 
-async function createUser({ name, email, password, role, businessName = '' }) {
+async function createUser({ name, email, password, role, businessName = '', phone, address, latitude, longitude }) {
   const normalizedEmail = email.trim().toLowerCase();
   const existing = await findByEmail(normalizedEmail);
   if (existing) {
@@ -75,7 +75,17 @@ async function createUser({ name, email, password, role, businessName = '' }) {
   });
 
   if (role === 'merchant') {
-    await Merchant.create({ userId: newId, name: newUser.name, businessName: newUser.businessName, email: newUser.email, createdAt: now });
+    await Merchant.create({ 
+      userId: newId, 
+      name: newUser.name, 
+      businessName: newUser.businessName, 
+      email: newUser.email, 
+      phone, 
+      address, 
+      latitude: Number(latitude) || null, 
+      longitude: Number(longitude) || null,
+      createdAt: now 
+    });
   }
 
   return {

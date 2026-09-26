@@ -4,6 +4,7 @@ const { authenticate, requireRole } = require('../middleware/authMiddleware');
 
 const router = express.Router();
 router.get('/', getOffers);
+router.get('/active', getOffers);
 router.post('/', authenticate, requireRole('merchant'), createOffer);
 router.delete('/:id', authenticate, requireRole('merchant'), deleteOffer);
 
