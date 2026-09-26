@@ -1,0 +1,1404 @@
+[
+  {
+    "id": 1,
+    "name": "Hotel Amantran",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Amantran — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Amantran%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Amantran in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Hotel Matsyam",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Matsyam — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Matsyam%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Matsyam in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mehendale's Swad Dining",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Mehendale's Swad Dining — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Mehendale%27s%20Swad%20Dining%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Mehendale's Swad Dining in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Masala Kitchen",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Masala Kitchen — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Masala%20Kitchen%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Masala Kitchen in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Kokan Katta",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Kokan Katta — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Kokan%20Katta%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Kokan Katta in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Hotel Prasanna",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Prasanna — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Prasanna%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Prasanna in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Hotel Abhishek",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Abhishek — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Abhishek%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Abhishek in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Hotel Vyankatesh",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Vyankatesh — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Vyankatesh%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Vyankatesh in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Hotel Atithi",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Atithi — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Atithi%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Atithi in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Hotel Malhar",
+    "vibes": "food local cuisine family dining seafood dining",
+    "cost": 400.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Malhar — a restaurant experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Malhar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Malhar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "POKKET CAFE RATNAGIRI",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "POKKET CAFE RATNAGIRI — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=POKKET%20CAFE%20RATNAGIRI%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "POKKET CAFE RATNAGIRI in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Cafe Good Vibes",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Cafe Good Vibes — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Cafe%20Good%20Vibes%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Cafe Good Vibes in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Cafe 86",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Cafe 86 — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Cafe%2086%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Cafe 86 in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "The Coffee Culture",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "The Coffee Culture — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=The%20Coffee%20Culture%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "The Coffee Culture in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Cafe Rio",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Cafe Rio — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Cafe%20Rio%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Cafe Rio in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Cafe Coffee Day Ratnagiri",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Cafe Coffee Day Ratnagiri — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Cafe%20Coffee%20Day%20Ratnagiri%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Cafe Coffee Day Ratnagiri in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Tea Post",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Tea Post — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Tea%20Post%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Tea Post in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "The Chocolate Room",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "The Chocolate Room — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=The%20Chocolate%20Room%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "The Chocolate Room in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Cafe Aroma",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Cafe Aroma — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Cafe%20Aroma%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Cafe Aroma in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Brewberrys",
+    "vibes": "cafe coffee food relaxing social casual",
+    "cost": 200.0,
+    "duration_hours": 1.5,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Brewberrys — a cafe experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Brewberrys%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Brewberrys in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Hidden Food",
+      "Solo & Quiet",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "V Square",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "V Square — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=V%20Square%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "V Square in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Hotel Vyankatesh Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Vyankatesh Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Vyankatesh%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Vyankatesh Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Hotel Amantran Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Amantran Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Amantran%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Amantran Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Hotel Abhishek Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Abhishek Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Abhishek%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Abhishek Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Hotel Prasanna Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Prasanna Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Prasanna%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Prasanna Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Hotel Atithi Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Atithi Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Atithi%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Atithi Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Hotel Sea Fans Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Sea Fans Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Sea%20Fans%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Sea Fans Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Hotel Sangam Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Sangam Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Sangam%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Sangam Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Hotel Malhar Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Malhar Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Malhar%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Malhar Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Hotel Landmark Bar",
+    "vibes": "nightlife food drinks social evening",
+    "cost": 800.0,
+    "duration_hours": 2.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Landmark Bar — a bar & pub experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Landmark%20Bar%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Landmark Bar in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Nightlife"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Kohinoor Samudra Beach Resort",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Kohinoor Samudra Beach Resort — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Kohinoor%20Samudra%20Beach%20Resort%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Kohinoor Samudra Beach Resort in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Beach & Coastal"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Hotel Sea Fans",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Sea Fans — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Sea%20Fans%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Sea Fans in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Beach & Coastal"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Hotel Vihar Deluxe",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Vihar Deluxe — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Vihar%20Deluxe%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Vihar Deluxe in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Hotel Sangam Regency",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Sangam Regency — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Sangam%20Regency%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Sangam Regency in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Hotel Anand",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Anand — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Anand%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Anand in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Hotel Prabha",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Prabha — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Prabha%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Prabha in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Hotel Vyankatesh",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Vyankatesh — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Vyankatesh%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Vyankatesh in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Hotel Abhishek",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Abhishek — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Abhishek%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Abhishek in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Hotel Atithi",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Atithi — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Atithi%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Atithi in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Hotel Durvankur",
+    "vibes": "stay comfort family relaxation travel",
+    "cost": 2500.0,
+    "duration_hours": 12.0,
+    "weather_type": "indoor",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Hotel Durvankur — a hotel experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Hotel%20Durvankur%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Hotel Durvankur in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "History",
+      "Family Friendly",
+      "Wellness & Relaxation"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Bhatye Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Bhatye Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Bhatye%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Bhatye Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Mandavi Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Mandavi Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Mandavi%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Mandavi Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Ganpatipule Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor spiritual",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ganpatipule Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ganpatipule%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ganpatipule Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Aare-Ware Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Aare-Ware Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Aare-Ware%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Aare-Ware Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Kalbadevi Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Kalbadevi Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Kalbadevi%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Kalbadevi Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Ganeshgule Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ganeshgule Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ganeshgule%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ganeshgule Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Malgund Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Malgund Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Malgund%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Malgund Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Gavkhadi Beach",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Gavkhadi Beach — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Gavkhadi%20Beach%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Gavkhadi Beach in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Ratnagiri Coast",
+    "vibes": "beach scenic sunset relaxing family photography outdoor",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ratnagiri Coast — a beach experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ratnagiri%20Coast%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ratnagiri Coast in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Romantic"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Ratnadurg Fort",
+    "vibes": "heritage history culture architecture photography history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ratnadurg Fort — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ratnadurg%20Fort%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ratnadurg Fort in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Thiba Palace",
+    "vibes": "heritage history culture architecture photography history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Thiba Palace — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Thiba%20Palace%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Thiba Palace in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Tilak Ali Museum",
+    "vibes": "heritage history culture architecture photography history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Tilak Ali Museum — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Tilak%20Ali%20Museum%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Tilak Ali Museum in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Lokmanya Tilak Birthplace",
+    "vibes": "heritage history culture architecture photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Lokmanya Tilak Birthplace — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Lokmanya%20Tilak%20Birthplace%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Lokmanya Tilak Birthplace in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Jaigad Fort",
+    "vibes": "heritage history culture architecture photography history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Jaigad Fort — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Jaigad%20Fort%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Jaigad Fort in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Jaigad Lighthouse",
+    "vibes": "heritage history culture architecture photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Jaigad Lighthouse — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Jaigad%20Lighthouse%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Jaigad Lighthouse in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Purnagad Fort",
+    "vibes": "heritage history culture architecture photography history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Purnagad Fort — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Purnagad%20Fort%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Purnagad Fort in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Ganpatipule Temple",
+    "vibes": "heritage history culture architecture photography spiritual",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ganpatipule Temple — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ganpatipule%20Temple%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ganpatipule Temple in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Spiritual",
+      "Photography"
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Malgund Keshavsut Memorial",
+    "vibes": "heritage history culture architecture photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Malgund Keshavsut Memorial — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Malgund%20Keshavsut%20Memorial%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Malgund Keshavsut Memorial in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography"
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Bhagwati Temple",
+    "vibes": "heritage history culture architecture photography spiritual",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Bhagwati Temple — a heritage & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Bhagwati%20Temple%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Bhagwati Temple in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Photography",
+      "Spiritual"
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Artalora",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Artalora — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Artalora%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Artalora in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Tilak Ali Museum",
+    "vibes": "art culture traditional local heritage creative history",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Tilak Ali Museum — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Tilak%20Ali%20Museum%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Tilak Ali Museum in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Keshavsut Memorial",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Keshavsut Memorial — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Keshavsut%20Memorial%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Keshavsut Memorial in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Malgund Memorial",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Malgund Memorial — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Malgund%20Memorial%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Malgund Memorial in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Ratnagiri Cultural Centre",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ratnagiri Cultural Centre — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ratnagiri%20Cultural%20Centre%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ratnagiri Cultural Centre in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage"
+    ]
+  },
+  {
+    "id": 65,
+    "name": "local handicraft centres",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "local handicraft centres — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=local%20handicraft%20centres%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "local handicraft centres in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Art & Creativity",
+      "Local Artisans"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Konkan handicraft stalls",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Konkan handicraft stalls — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Konkan%20handicraft%20stalls%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Konkan handicraft stalls in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Art & Creativity",
+      "Local Artisans"
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Ganpatipule craft shops",
+    "vibes": "art culture traditional local heritage creative spiritual",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Ganpatipule craft shops — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Ganpatipule%20craft%20shops%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Ganpatipule craft shops in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Spiritual",
+      "Art & Creativity"
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Warli-art displays",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Warli-art displays — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Warli-art%20displays%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Warli-art displays in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Art & Creativity"
+    ]
+  },
+  {
+    "id": 69,
+    "name": "local cultural programmes",
+    "vibes": "art culture traditional local heritage creative",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "mixed",
+    "max_group_size": 20,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "local cultural programmes — a arts & culture experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=local%20cultural%20programmes%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "local cultural programmes in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Culture & Heritage",
+      "Art & Creativity"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Thiba Point",
+    "vibes": "nature scenic peaceful outdoor photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Thiba Point — a nature experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Thiba%20Point%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Thiba Point in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography"
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Bhatye Coast",
+    "vibes": "nature scenic peaceful outdoor photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Bhatye Coast — a nature experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Bhatye%20Coast%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Bhatye Coast in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography"
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Aare-Ware viewpoint",
+    "vibes": "nature scenic peaceful outdoor photography",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Aare-Ware viewpoint — a nature experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Aare-Ware%20viewpoint%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Aare-Ware viewpoint in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography"
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Nivali Waterfall",
+    "vibes": "nature scenic peaceful outdoor photography waterfall",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Nivali Waterfall — a nature experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Nivali%20Waterfall%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Nivali Waterfall in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Nature & Scenic"
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Panval Waterfall",
+    "vibes": "nature scenic peaceful outdoor photography waterfall",
+    "cost": 0.0,
+    "duration_hours": 2.0,
+    "weather_type": "outdoor",
+    "max_group_size": 50,
+    "lat": 16.9944,
+    "lon": 73.3,
+    "description": "Panval Waterfall — a nature experience in Ratnagiri Taluka, Ratnagiri, Maharashtra.",
+    "image_url": "https://www.google.com/search?tbm=isch&q=Panval%20Waterfall%20Ratnagiri%20Ratnagiri%20Maharashtra",
+    "image_source": "Web image search",
+    "image_alt": "Panval Waterfall in Ratnagiri, Ratnagiri, Maharashtra",
+    "categories": [
+      "Photography",
+      "Nature & Scenic"
+    ]
+  }
+
+]
